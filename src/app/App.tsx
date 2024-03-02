@@ -1,14 +1,12 @@
 import { Link, Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
-import { useTheme } from "./theme/useTheme";
+import { Suspense } from "react";
 import classNames from "classnames";
-
-const MainPage = lazy(() => import("./pages/MainPage/MainPage"));
-const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
+import { useTheme } from "@app/providers/ThemeProvider";
+import { MainPage } from "@/pages/MainPage";
+import { AboutPage } from "@/pages/AboutPage";
 
 export const App = () => {
     const { theme, toggleTheme } = useTheme();
-
     return (
         <div className={classNames("app", theme)}>
             <button onClick={toggleTheme}>Сменить тему</button>
