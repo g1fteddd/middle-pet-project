@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import styles from "./ThemeSwitcher.module.css";
 import { useTheme } from "app/providers/ThemeProvider";
 import LightIcon from "shared/assets/icons/theme-light.svg?react";
 import { Theme } from "app/providers/ThemeProvider";

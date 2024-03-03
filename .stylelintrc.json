@@ -1,0 +1,13 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "rules": {
+        "selector-max-id": 0,
+        "selector-class-pattern": "^(?:[a-z][a-zA-Z]+|[A-Z][a-zA-Z]+|[a-z]+-[a-z]+)$",
+        "unit-allowed-list": ["%", "px", "vh", "s"],
+        "declaration-property-unit-allowed-list": {
+            "/^(gap|padding|margin|border)/": ["px"],
+            "/^transition/": ["s"]
+        }
+    },
+    "ignoreFiles": ["dist/**/*.css"]
+}
