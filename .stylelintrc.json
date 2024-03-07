@@ -10,5 +10,5 @@
             "/^transition/": ["s"]
         }
     },
-    "ignoreFiles": ["dist/**/*.css"]
+    "ignoreFiles": ["dist/**/*.css", "coverage/**/*.css"]
 }

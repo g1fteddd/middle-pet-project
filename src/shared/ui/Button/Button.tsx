@@ -3,6 +3,7 @@ import styles from "./Button.module.css";
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";
 
 export enum ThemeButton {
+    PRIMARY = "primary",
     CLEAR = "clear",
 }
 
@@ -16,7 +17,7 @@ interface ButtonProps
 export const Button = ({
     className,
     children,
-    theme = ThemeButton.CLEAR,
+    theme = ThemeButton.PRIMARY,
     ...otherProps
 }: ButtonProps) => {
     return (
