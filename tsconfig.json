@@ -29,8 +29,9 @@
             "features/*": ["src/features/*"],
             "entities/*": ["src/entities/*"],
             "shared/*": ["src/shared/*"]
-        }
+        },
+        "types": ["vitest/globals", "@testing-library/jest-dom"]
     },
-    "include": ["src"],
+    "include": ["src", ".test/setup.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

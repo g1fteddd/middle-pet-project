@@ -9,5 +9,8 @@ export default defineConfig({
         coverage: {
             reporter: ["text", "html"],
         },
+        globals: true,
+        environment: "jsdom",
+        setupFiles: "./test/setup.ts",
     },
 });
