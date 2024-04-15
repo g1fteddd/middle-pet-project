@@ -1,30 +1,38 @@
 import classNames from "classnames";
 import styles from "./Button.module.css";
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";
-
-export enum ThemeButton {
-    PRIMARY = "primary",
-    CLEAR = "clear",
-}
+import { ButtonSize, ButtonTheme } from "./Button.model";
 
 interface ButtonProps
     extends PropsWithChildren,
         ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme?: ThemeButton;
+    theme?: ButtonTheme;
+    square?: boolean;
+    size?: ButtonSize;
 }
 
 export const Button = ({
     className,
     children,
-    theme = ThemeButton.PRIMARY,
+    theme = ButtonTheme.PRIMARY,
+    square,
+    size = ButtonSize.M,
     ...otherProps
 }: ButtonProps) => {
+    const mods = {};
+
+    const buttonClass = classNames(
+        styles.Button,
+        [styles[theme]],
+        [styles[size]],
+        { [styles.square]: square },
+        mods,
+        className
+    );
+
     return (
-        <button
-            className={classNames(styles.Button, theme, className)}
-            {...otherProps}
-        >
+        <button className={buttonClass} {...otherProps}>
             {children}
         </button>
     );

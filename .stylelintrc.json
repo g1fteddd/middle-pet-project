@@ -2,7 +2,7 @@
     "extends": ["stylelint-config-standard"],
     "rules": {
         "selector-max-id": 0,
-        "selector-class-pattern": "^(?:[a-z][a-zA-Z]+|[A-Z][a-zA-Z]+|[a-z]+-[a-z]+)$",
+        "selector-class-pattern": null,
         "keyframes-name-pattern": null,
         "unit-allowed-list": ["%", "px", "vh", "s"],
         "declaration-property-unit-allowed-list": {
